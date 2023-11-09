@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electromedical Department</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center; /* Center align all content */
+        }
+
+        h2 {
+            color: #e74c3c;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 0px;
+        }
+
+        .department-info {
+            margin-top: 20px;
+            padding: 20px;
+            font-size: 18px; 
+            text-align: left; /
+        }
+
+        .department-info p {
+            margin-bottom: 15px; /* Add spacing between paragraphs */
+        }
+
+        .department-info ul {
+            list-style: disc; /* Use disc style for list items */
+            margin-left: 20px; /* Add left margin to the list */
+        }
+
+        .incharge-profile {
+            color: black;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .incharge-profile img {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 5px;
+            max-width: 100%; 
+            display: block; 
+            margin: 0 auto; 
+        }
+
+        .incharge-profile img:hover {
+            border-bottom: 6px solid red;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .incharge-profile img {
+                max-width: 90%; 
+            }
+          ul{
+           padding-left:10px;
+           }
+          .department-image{
+           width:100%;
+           height:40vh;
+           margin-top:20px;
+          }
+        }
+
+/* 
+        body {
+  display: grid;
+  grid-template-columns: auto 0px; 
+} */
+
+.top-up {
+  --offset: 50px; 
+  
+  position: sticky;
+  bottom: 40px;      
+  margin-left:70px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+p {
+  font-size: 25px;
+}
+
+/* remove the below if you don't want smooth scrolling */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+footer p{
+    background: #4070f4;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    height: 13vh;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Pof Hospital</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Pof Hospital</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="hosipital.html">Home</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="book-appoi.html">Book Appointment</a></li>
+                    <li><a href="support.html" class="current">Support</a></li>
+                    <li><a href="servise.html">Dental</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script>
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+<div class="container">
+    <img src="https://hospital.pof.gov.pk/images/support/Electromedical.jpg" alt="Electromedical Department" class="department-image">
+    <div class="department-info">
+        <h2>ELECTRO MEDICAL DEPARTMENT</h2>
+        <p><strong>Brief History of EM Department</strong></p>
+        <p>The Electro medical Department of POF Hospital is working under the supervision & guidance of Director Services since 1986 and headed by an Officer of Asst. Manager rank and also providing repair / maintenance services for all types of biomedical equipment installed at POF Hospital.</p>
+        <p><strong>Facilities provided by the Deptt</strong></p>
+        <ul>
+            <li>Maintenance / repair of all Electromedical equipment installed in hospital and dispensaries including of POF Sanjwal & Havelian.</li>
+            <li>To keep a record of repair/maintenance of all equipment along with their log books.</li>
+        </ul>
+    </div>
+    <div class="incharge-profile">
+        <img src="https://hospital.pof.gov.pk/doctors/faisal.jpg" alt="Incharge Profile" class="profile-image">
+        <div class="content">
+            <p><strong>Incharge Profile</strong></p>
+            <p>Faisal Nisar - Assistant Manager</p>
+            <p><strong>Technical qualification:</strong> BS Electronics</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 All Rights Reserved by POF Hospital - IT Department POF  </p>
+</footer>
+
+<a href="#" class="top-up">Back to Top &#8593;</a>
+</body>
+</html>

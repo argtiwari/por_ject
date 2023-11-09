@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav {
+            color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .top {
+            overflow: hidden;
+        }
+
+        .top iframe {
+            width: 100%;
+            height: 300px; 
+        }
+
+        .bottom {
+            padding: 20px;
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            width: 100%;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 70%; 
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e74c3c;
+        }
+
+        .contact-details {
+            margin-top: 20px;
+        }
+
+        .contact-details p {
+            margin: 5px 0;
+        }
+
+        .contact-details p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Media Query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .top iframe {
+                height: 200px;
+            }
+          .bottom{
+            padding-left:30px;
+            }
+            input[type="text"],
+        input[type="email"],
+        textarea {
+           width:90%;
+           }
+        }
+
+/* 
+        body {
+  display: grid;
+  grid-template-columns: auto 0px; 
+} */
+
+.top-up {
+  --offset: 50px; 
+  
+  position: sticky;
+  bottom: 40px;      
+  margin-left:70px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+p {
+  font-size: 25px;
+}
+
+/* remove the below if you don't want smooth scrolling */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+#footer p{
+    background: #4070f4;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    height: 13vh;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;}
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- <nav>
+        <ul>
+            <li><a href="practice1.html">Home</a></li>
+            <li><a href="contact1.html">Contact</a></li>
+        </ul>
+    </nav> -->
+
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Pof Hospital</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Pof Hospital</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="hosipital.html">Home</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html" class="current">Contact</a></li>
+                    <li><a href="book-appoi.html">Book Appointment</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="servise.html">Dental</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script>
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+    <div class="content">
+        <div class="top">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.690710646354!2d-122.08581468471137!3d37.421999679825104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858089a177a605%3A0x283af6f67f048736!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1629415702430!5m2!1sen!2sus" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+        <div class="bottom">
+            <h1>Get in touch by filling the form below</h1>
+            <form id="contact-form" action="#">
+                <div class="form-group">
+                    <label for="name">Your name (required):</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <input type="text" id="category" name="category">
+                </div>
+                <div class="form-group">
+                    <label for="email">Your email (required):</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject:</label>
+                    <input type="text" id="subject" name="subject">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message (required):</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+            <div class="contact-details">
+                <h2>Contact Details</h2>
+                <p>POF HOSPITAL, QUAID AVENUE WAHCANTT</p>
+                <p>Call us: +92 51 9055 25200</p>
+                <p>+92 51 4514 25200</p>
+                <p>Email: comdhosp@pof.gov.pk</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="footer">
+    <p>&copy; 2023 All Rights Reserved by POF Hospital - IT Department POF  </p>
+</footer>
+
+<a href="#" class="top-up">Back to Top &#8593;</a>
+
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Hospital Website</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="navbar.css">
+<style>
+/* Reset some default styles for the page */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body, h1, p, ul {
+    margin: 0;
+    padding: 0;
+}
+/* Style for the third div with a background image */
+.hero {
+    background-image: url('https://preview.colorlib.com/theme/health/images/index_hero.jpg.webp');
+    background-size: cover;
+    height: 100vh;
+background-position:center center;
+background-repeat:no repeat;
+max-width: 100%;
+}
+
+/* style about section general about pof */
+header .sirabout{
+    background-color:#3498db;
+    color: #fff;
+    text-align: center;
+    padding:1px;
+}
+ 
+header h1 {
+    font-size: 30px;
+    background-color:#3498db;
+}
+.generalabout{
+background-color:#3498db;
+}
+main {
+    padding: 20px;
+}
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.left-section img {
+    width: 90%;
+    margin-left:30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.right-section {
+    text-align: center;
+}
+
+.right-section h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.right-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+/* Responsive styles for different screen sizes */
+
+@media (min-width: 768px) {
+    .about {
+        flex-direction: row;
+    }
+
+    .left-section {
+        margin-right: 20px;
+    }
+}
+
+/* Base styles for the about pof */
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+}
+.aboutpof{
+background-color:#3498db;
+}
+main {
+    padding: 20px;
+}
+
+.about1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin:20px;
+}
+
+.about-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.read-more {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top:15px;
+}
+
+.video {
+    flex: 1;
+    text-align: center;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* Responsive styles for different screen sizes */
+
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column-reverse;
+    }
+
+    .about-content, .video {
+        flex: 1;
+        width: 100%;
+    }
+    .about1{
+       justify-content:center;
+     }
+    .frame{
+     width:200px;
+    }
+}
+
+
+
+
+/* Base styles for the service page */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    background-color:#61C79B;
+}
+.servicedetail{
+background-color:#3498db;
+}
+/* Style the main services section */
+main.services {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Style each service container */
+.service {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Style service icons */
+.service .icon {
+    font-size: 48px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+/* Style service titles */
+.service h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Style service descriptions */
+.service p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Hover effect: Change background color and add link draw effect */
+.service:hover {
+    background-color: #3498db;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Style links */
+.service-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 23px 0;
+    height:13vh;
+}
+/*footer p{
+font-size:20px;
+gap:20px;
+justify-content:space-between;
+}*/
+
+
+/* Style the icon in the footer */
+.footer-icon {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 36px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    float:right;
+}
+
+/* Change icon color on hover */
+.footer-icon:hover {
+    color: #2980b9;
+}
+@media (max-width: 768px){
+   footer p{
+     font-size:13px;
+}
+}
+
+
+
+
+/* Add box shadow to services */
+.service {
+    /* ... (previous styles) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial box shadow */
+}
+
+/* Style the line draw effect at the bottom */
+.service::after {
+    content: ''; /* Create a pseudo-element */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 5px;
+    background-color: red; /* Red line color */
+    transition: width 0.3s ease, left 0.3s ease; /* Add transition for width and left properties */
+    transform: translateX(-50%); /* Center the line */
+}
+
+/* Hover effect: Expand the line draw effect */
+.service:hover::after {
+    width: 100%; /* Expand the line to 100% width */
+}
+
+
+
+
+
+
+
+
+button{
+padding-top : 20px;
+}
+.serviceback{
+background-color:#3498db;
+}
+.aboutback{
+background-color:#3498db;
+}
+.sirabout{
+background-color:#3498db;
+margin-top:10px;
+}
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float:left;
+  width:80%;
+gap:70px;
+  background: white;
+  padding-right:10px;	
+height:6vh;
+color:transparent;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: black;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+ /* CSS for circular loading bar */
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-top: 8px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Additional styles for your content */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #fff; /* Set your desired background color */
+        }
+
+
+        
+
+</style>
+  
+</head>
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Pof Hospital</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Pof Hospital</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="current">Home</a></li>
+                    <li><a href="about-us.html">About</a></li>
+                    <li><a href="#srvis">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="book-appoi.html">Book Appointment</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="dental.html">Dental</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script>
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Circular loading bar -->
+    <!-- <div class="loader-container">
+        <div class="loader"></div>
+    </div> -->
+
+    <!-- Rest of your website content -->
+    <!-- ... (existing code) -->
+    <!-- First div with a white background -->
+    <!-- <div class="header">
+        <h1>Pof Hospital</h1>
+        <div class="contact-info">
+            <p>Call Us: 123-456-789</p>
+        </div>
+    </div> -->
+
+    <!-- <nav><div class="navbar">
+        
+        <input type="checkbox" id="check">
+      <label for="check" class="checkbtn">
+        <i class="fas fa-bars"></i>
+      </label>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="about.html.html" target="_blank">About</a></li>
+            <li><a href="hospitalcontact.html" target="_blank">Contact</a></li>
+            <li><a href="bookappointment.html">Book Appointment</a></li>
+            <li><a href="support.html">Support</a></li>
+            <li><a href="dental.html">Dental</a></li>
+        </ul>
+    </nav>
+     -->
+       
+    <div class="hero">
+        <!-- Content for this div -->
+    </div>
+
+
+
+    <header class="sirabout" class="dark" >
+        <h1 class="generalabout">LT. GENERAL ALI AMIR AWAN HI(M)</h1>
+    </header>
+    <main class="about">
+        <div class="left-section">
+            <!-- <img srfc="https://hospital.pof.gov.pk/images/general.jpg" alt="Lt. General Ali Amir Awan"> -->
+        </div>
+        <div class="right-section">
+            <h2>AboutIndia Ordnance Factories</h2>
+            <p>india Ordnance Factories is the country's premier defense production organization. We warmly welcome our international clients from friendly countries and offer a broad range of defense products manufactured to the highest level of quality standards at the most competitive prices. Established in 1951, POF is the largest state-owned defense manufacturer inIndia.</p>
+            <p>Besides being the main supplier to theIndia Armed Forces and law enforcement agencies, POF exports to a number of countries across the globe.</p>
+            <p>With a workforce of over 27,000 skilled employees in 14 defense industrial units and a number of commercial subsidiary companies, POF employs more than 20,000 plants scattered in the gigantic industrial complex located at Wah Cantonment inIndia.</p>
+            <p>Our product range is exquisitely portrayed in this catalog. We showcase it at most of the international defense exhibitions. POF's Exports Division employs experts who take care of customer requirements in a professional manner with utmost promptness.</p>
+        </div>
+    </main>
+   
+
+
+    <header class="aboutback">
+        <h1 class="aboutpof">About Us</h1>
+    </header>
+    <main class="about1">
+        <div class="about-content">
+            <h2>About POF's Hospital</h2>
+            <p>POFs Hospital was established in 1962 with an initial capacity of 103 beds. Hospital capacity increased to 200, 400, and 500 beds in 1963, 1969, and 1987, respectively. The existing bed strength is now 676 due to the introduction of new departments over successive years. It is now a modern tertiary care hospital providing teaching facilities to Wah Medical College.</p>
+            <button class="read-more">Read More</button>
+        </div>
+        <div class="video">
+            <iframe class="frame" width="460" height="259" src="https://www.youtube.com/embed/GnpLm9fzYxU" title="3D Medical Animation - Congestive Heart Failure" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </main>
+
+
+
+
+    <header class="serviceback" id="srvis">
+         
+        <h1 class="servicedetail">Our Services</h1>
+    </header>
+   <main class="services">
+        <a class="service-link" href="medical.html">
+            <div class="service">
+                <div class="icon"><i class="fa fa-medkit"></i></div>
+                <h2>Medical</h2>
+                <p>Department of Medicine is the largest department of medicine. </p>
+            </div>
+        </a>
+        <a class="service-link" href="surgical.html">
+            <div class="service">
+                <div class="icon"><i class="fa fa-scissors"></i></div>
+                <h2>Surgical</h2>
+                <p>Our Surgical department consists of two units: Surgical Unit-I and Surgical Unit-II.</p>
+            </div>
+        </a>
+        <a class="service-link" href="diagnostic.html">
+            <div class="service">
+                <div class="icon"><i class="fa fa-stethoscope"></i></div>
+                <h2>Diagnostic</h2>
+                <p>Our Diagnostic services offer the latest and most advanced diagnostic and therapeutic services. </p>
+            </div>
+        </a>
+    </main>
+    
+ 
+
+
+<footer>
+    <p>&copy; 2023 All Rights Reserved by POF Hospital - IT Department POF &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#top" class="top-icon">Top<i class="fas fa-arrow-up"></i></a></p>
+</footer>
+
+
+
+
+
+ <!-- <script>
+        // JavaScript to hide the loading bar after a simulated delay (you can adjust the delay)
+        window.addEventListener("load", function () {
+            setTimeout(function () {
+                document.querySelector(".loader-container").style.display = "none";
+            }, 3000); // Simulated delay of 3 seconds (you can adjust this value)
+        });
+
+
+// JavaScript for toggling the mobile menu
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.navbar ul');
+
+menuToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+</script>
+    </script> -->
+  
+</body>
+</html>

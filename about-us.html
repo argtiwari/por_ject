@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To POF Hospital</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Image */
+        .hospital-image {
+            text-align: center;
+        }
+
+        .hospital-image img {
+            width: 100%;
+            height: 50vh;
+        }
+
+        /* Back to Home Link */
+        .back-to-home {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-to-home a{
+            text-decoration: none;
+            color: white;
+            font-size: large;
+            font-weight: 800;
+            background-color: black;
+            padding: 5px 10px;
+            border-radius: 12px;
+        }
+
+        .back-to-home span{
+            color: red;
+            text-transform: uppercase;
+
+
+        }
+        .back-to-home a .aro:hover{
+            background-color: #3498db;
+        }
+
+
+         
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            color: #3498db;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            text-align: center;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .hospital-info {
+            margin-top: 20px;
+        }
+
+        .hospital-info p {
+            line-height: 1.6;
+        }
+
+        .departments {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .department {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .department:hover {
+            background-color: #e74c3c;
+        }
+           .mission  ul {
+            list-style: disc;
+            margin-left: 40px;
+            padding: 0;
+        }
+        
+
+        .mission {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: white;
+            color: black;
+            border-radius: 5px;
+        }
+
+     
+
+        .mission ul li {
+            margin-bottom: 10px;
+        }
+      .listprovide{
+        padding-left:15px;
+      }
+
+        /* Animation for the mission section */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .mission {
+            animation: fadeIn 1s;
+        }
+        
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        body {
+  display: grid;
+  grid-template-columns: auto 0px; 
+}
+
+.top-up {
+  --offset: 50px; 
+  
+  position: sticky;
+  bottom: 40px;      
+  margin-right:10px; 
+  place-self: end;
+  margin-top: calc(100vh + var(--offset));
+  
+  /* visual styling */
+  text-decoration: none;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #fff;
+  background: #000;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+
+p {
+  font-size: 25px;
+}
+
+/* remove the below if you don't want smooth scrolling */
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+footer p{
+    background: #4070f4;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+    height: 13vh;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;}
+
+        
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-bar">
+            <i class='bx bx-menu sidebarOpen' ></i>
+            <span class="logo navLogo"><a href="#">Pof Hospital</a></span>
+            <div class="menu">
+                <div class="logo-toggle">
+                    <span class="logo"><a href="#">Pof Hospital</a></span>
+                    <i class='bx bx-x siderbarClose'></i>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="hosipital.html">Home</a></li>
+                    <li><a href="about-us.html" class="current">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="book-appoi.html">Book Appointment</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="servise.html">Dental</a></li>
+                </ul>
+            </div>
+            <div class="darkLight-searchBox">
+                <div class="dark-light">
+                    <i class='bx bx-moon moon'></i>
+                    <i class='bx bx-sun sun'></i>
+                </div>
+                <div class="searchBox">
+                   <div class="searchToggle">
+                    <i class='bx bx-x cancel'></i>
+                    <i class='bx bx-search search'></i>
+                   </div>
+                    <div class="search-field">
+                        <input type="text" placeholder="Search...">
+                        <i class='bx bx-search'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+<script>
+const body = document.querySelector("body"),
+      nav = document.querySelector("nav"),
+      modeToggle = document.querySelector(".dark-light"),
+      searchToggle = document.querySelector(".searchToggle"),
+      sidebarOpen = document.querySelector(".sidebarOpen"),
+      siderbarClose = document.querySelector(".siderbarClose");
+      let getMode = localStorage.getItem("mode");
+          if(getMode && getMode === "dark-mode"){
+            body.classList.add("dark");
+          }
+// js code to toggle dark and light mode
+      modeToggle.addEventListener("click" , () =>{
+        modeToggle.classList.toggle("active");
+        body.classList.toggle("dark");
+        // js code to keep user selected mode even page refresh or file reopen
+        if(!body.classList.contains("dark")){
+            localStorage.setItem("mode" , "light-mode");
+        }else{
+            localStorage.setItem("mode" , "dark-mode");
+        }
+      });
+// js code to toggle search box
+        searchToggle.addEventListener("click" , () =>{
+        searchToggle.classList.toggle("active");
+      });
+ 
+      
+//   js code to toggle sidebar
+sidebarOpen.addEventListener("click" , () =>{
+    nav.classList.add("active");
+});
+body.addEventListener("click" , e =>{
+    let clickedElm = e.target;
+    if(!clickedElm.classList.contains("sidebarOpen") && !clickedElm.classList.contains("menu")){
+        nav.classList.remove("active");
+    }
+});
+</script>
+
+
+
+<div class="container">
+        <div class="hospital-image">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.R1k2JN-53PIYTiBWobdMpQHaD2&pid=Api&P=0&h=220" alt="POF Hospital Image">
+        </div>
+    <div class="container">
+        <h1>Welcome To POF Hospital</h1>
+        <p class="hospital-info">
+            POFs Hospital was established in 1962 with an initial capacity of 103 beds. Hospital capacity increased 200, 400 and 500 beds in 1963, 1969 and 1987 respectively. Existing bed strength is 676 due to the introduction of new departments over successive years. It is now a modern tertiary care hospital providing teaching facilities to Wah Medical College. The hospital is recognized for house job and postgraduate training in various disciplines. The hospital is responsible to provide health care facilities to serving/ retired POF’s employees and families / parents of the employees, army personnel posted to POF (including their families/ parents) and employees of allied departments (CMA, IDA etc.) The hospital also extends diagnostic and treatment facilities to the general public residing in the area on payment.
+        </p>
+        <h2>All Departments<hr style="width:22vh; height:.6vh; background-color:white;border-radius:2px; border-bottom:2px solid white"></h2>
+        <ul class="departments">
+            <li class="department">Internal Medicine</li>
+            <li class="department">General Surgery, Orthopedics, Urology and Neurosurgery</li>
+            <li class="department">Gynaecology/Obstetrics</li>
+            <li class="department">Pediatrics</li>
+            <li class="department">Urgent Care</li>
+            <li class="department">Psychiatry</li>
+            <li class="department">Eye</li>
+            <li class="department">ENT</li>
+            <li class="department">Skin</li>
+            <li class="department">Dental Centre</li>
+            <li class="department">Rehabilitation Medicine</li>
+            <li class="department">Coronary Care Unit</li>
+            <li class="department">Medical ICU</li>
+            <li class="department">Surgical ITC</li>
+            <li class="department">Dialysis Unit</li>
+            <li class="department">Endoscopy/ ERCP</li>
+            <li class="department">Burn Centre</li>
+            <li class="department">A & E Department</li>
+            <li class="department">TB/Isolation</li>
+        </ul>
+        <h2>Our Mission<hr style="width:20vh; height:.5vh; background-color:white;"></h2>
+        <div class="mission">
+          <span class="listprovide">Provide quality medical care to the entitled clientele, which include:-</span>
+            <ul>
+                <li>Serving / retired POF employees and their families</li>
+                <li>Parents of serving POF employees</li>
+                <li>Army personnel posted at POFs, their families and parents</li>
+                <li>Employees of allied departments and their families</li>
+            </ul>
+        </div>
+    </div>
+<!-- Back to Home Link -->
+        <div class="back-to-home">
+            <a href="hosipital.html"><span class="aro">&#8592;</span>Back to <span>Home</span></a>
+            <!-- <a href="file:///C:/Users/Lenovo/Desktop/practice1.html#">Back to Home</a> -->
+        </div>
+
+
+         
+    
+
+    
+<footer>
+    <p>&copy; 2023 All Rights Reserved by POF Hospital - IT Department POF  </p>
+</footer>
+
+<a href="#" class="top-up">Back to Top &#8593;</a>
+</body>
+</html>
